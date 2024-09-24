@@ -93,7 +93,7 @@ const Gallery = ({ users }: GalleryProps) => {
                   </div>
                   <div className="field">
                     <FaLocationDot className="icon" />
-                    <div className="data">{`${selectedUser.address.street}, ${selectedUser.address.suite}, ${selectedUser.address.city}`}</div>
+                    <div className="value">{`${selectedUser.address.street}, ${selectedUser.address.suite}, ${selectedUser.address.city}`}</div>
                   </div>
                   <div className="field">
                     <FaPhone className="icon" />
