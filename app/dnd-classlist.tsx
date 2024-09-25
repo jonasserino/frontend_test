@@ -1,5 +1,5 @@
 import Link from "next/link";
-import type { DNDClass } from "./types/dnd";
+import type { DNDClass } from "../types/dnd";
 
 type Props = {
 	dndClasses: DNDClass[];

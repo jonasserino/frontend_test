@@ -1,5 +1,5 @@
 import { DND_API_HOST } from "@/constants";
-import type { DNDClassData } from "@/app/types/dnd";
+import type { DNDClassData } from "@/types/dnd";
 import Link from "next/link";
 
 type PageProps = {
