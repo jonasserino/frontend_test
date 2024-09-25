@@ -1,9 +1,9 @@
 import styles from "./page.module.css";
 
 import Gallery from "./gallery";
-import { getClasses } from "./lib/dnd";
+import { getClasses } from "@/lib/dnd";
 import DNDClassList from "./dnd-classlist";
-import { getUsers } from "./lib/users";
+import { getUsers } from "@/lib/users";
 
 export default async function Home() {
 	const users = await getUsers();

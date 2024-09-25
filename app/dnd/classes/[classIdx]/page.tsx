@@ -1,4 +1,4 @@
-import { DND_API_HOST } from "@/app/constants";
+import { DND_API_HOST } from "@/constants";
 import type { DNDClassData } from "@/app/types/dnd";
 import Link from "next/link";
 
@@ -7,7 +7,6 @@ type PageProps = {
 		classIdx: string;
 	};
 };
-
 
 export default async function DNDClassPage({ params }: PageProps) {
 	const response = await fetch(`${DND_API_HOST}/classes/${params.classIdx}`);
