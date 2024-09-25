@@ -3,3 +3,21 @@
 @import "./user-info";
 @import "./user-panel";
 @import "./modal-container";
+
+.sr-only {
+    position: absolute;
+    top: -200vh;
+    right: -200vw;
+    visibility: hidden;
+    width: 1px;
+    height: 1px;
+}
+// reset
+.ul-reset {
+    margin: 0;
+    padding: 0;
+}
+
+dd {
+ margin: 0;
+}
