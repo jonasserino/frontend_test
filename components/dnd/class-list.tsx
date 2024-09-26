@@ -11,7 +11,7 @@ export default function DNDClassList({ dndClasses }: Props) {
 			<h2>DND Classes</h2>
 			<ul className="dnd-classlist">
 				{dndClasses?.map((dndClass) => (
-					<li className="item" key={`DNDClass-${dndClass.index}`}>
+					<li className="item" key={`classlist-item-${dndClass.index}`}>
 						<Link className="link" href={`/dnd/classes/${dndClass.index}`}>
 							{dndClass.name}
 						</Link>
