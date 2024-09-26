@@ -9,9 +9,9 @@ import {
 	FaEnvelope,
 } from "react-icons/fa6";
 
-import Modal from "./modal";
+import Modal from "@/components/users/modal";
 
-import { User } from "../types/user";
+import type { User } from "@/types/user";
 
 export type GalleryProps = {
 	users: User[];

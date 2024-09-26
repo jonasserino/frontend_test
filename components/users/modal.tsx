@@ -1,7 +1,7 @@
 "use client";
 
 import classNames from "classnames";
-import React, { ReactNode, useEffect } from "react";
+import React, { type ReactNode, useEffect } from "react";
 import ReactDOM from "react-dom";
 import FocusLock from "react-focus-lock";
 
