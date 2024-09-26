@@ -6,6 +6,22 @@
     & > section {
         padding: 1rem;
         border: 1px solid #222;
+
+        & > .heading {
+            margin: 0;
+            margin-bottom: 0.5rem;
+        }
+
+        & > ul {
+            display: flex;
+            flex-direction: column;
+            gap: 0.3rem;
+            
+            & > li {
+                list-style-type: disc;
+                list-style-position: inside;
+            }
+        }
     }
 
     @media screen and (min-width: 768.1px) {

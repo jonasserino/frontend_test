@@ -34,44 +34,46 @@ export default async function DNDClassPage({ params }: PageProps) {
 			</nav>
 			<main>
 				<h1>{className}</h1>
-				{proficiencies && proficiencies.length > 0 && (
-					<section>
-						<h2>Proficiencies</h2>
-						<ul>
-							{proficiencies.map((proficiency) => (
-								<li key={`ClassProficiency-${proficiency.index}`}>
-									{proficiency.name}
-								</li>
-							))}
-						</ul>
-					</section>
-				)}
-				{startingEquipment && startingEquipment.length > 0 && (
-					<section>
-						<h2>Starting Equipment</h2>
-						<ul>
-							{" "}
-							{startingEquipment?.map((startingEq) => (
-								<li key={`StartingEquipment-${startingEq.equipment.index}`}>
-									{startingEq.equipment.name} - {startingEq.quantity}
-								</li>
-							))}
-						</ul>
-					</section>
-				)}
-				{subClasses && subClasses.length > 0 && (
-					<section>
-						<h2>Sub-classes</h2>
-						<ul>
-							{" "}
-							{subClasses?.map((subClass) => (
-								<li key={`SubClass-${subClass.index}`}>
-									{subClass.name} - {subClass.name}
-								</li>
-							))}
-						</ul>
-					</section>
-				)}
+				<div className="class-details">
+					{proficiencies && proficiencies.length > 0 && (
+						<section className="section">
+							<h2 className="heading">Proficiencies</h2>
+							<ul>
+								{proficiencies.map((proficiency) => (
+									<li key={`ClassProficiency-${proficiency.index}`}>
+										{proficiency.name}
+									</li>
+								))}
+							</ul>
+						</section>
+					)}
+					{startingEquipment && startingEquipment.length > 0 && (
+						<section className="section">
+							<h2 className="heading">Starting Equipment</h2>
+							<ul>
+								{" "}
+								{startingEquipment?.map((startingEq) => (
+									<li key={`StartingEquipment-${startingEq.equipment.index}`}>
+										{startingEq.equipment.name} - {startingEq.quantity}
+									</li>
+								))}
+							</ul>
+						</section>
+					)}
+					{subClasses && subClasses.length > 0 && (
+						<section className="section">
+							<h2 className="heading">Sub-classes</h2>
+							<ul>
+								{" "}
+								{subClasses?.map((subClass) => (
+									<li key={`SubClass-${subClass.index}`}>
+										{subClass.name} - {subClass.name}
+									</li>
+								))}
+							</ul>
+						</section>
+					)}
+				</div>
 			</main>
 		</>
 	);
