@@ -12,13 +12,16 @@ export async function getClass(index: string) {
 	try {
 		const response = await fetch(`${DND_API_HOST}/classes/${index}`);
 
-		if (!response.ok) {
-			throw Error("Bad request");
+		if (response.ok) {
+			const classData = (await response.json()) as DNDClassData;
+			return { data: classData, error: null };
+		} else {
+			if (response.status === 404) throw new Error("404, Not found");
+			if (response.status === 500)
+				throw new Error("500, internal server error");
+
+			throw Error(response.statusText);
 		}
-
-		const classData = (await response.json()) as DNDClassData;
-
-		return { data: classData, error: null };
 	} catch (e) {
 		console.error(e);
 		return {
