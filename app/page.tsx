@@ -11,8 +11,8 @@ export default async function Home() {
 
 	return (
 		<main className={styles.main}>
-			<Gallery users={users} />
 			<DNDClassList dndClasses={classes.results} />
+			<Gallery users={users} />
 		</main>
 	);
 }
