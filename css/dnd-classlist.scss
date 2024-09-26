@@ -1,6 +1,6 @@
 .dnd-classlist {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr;
     gap: 1rem;
 
     margin: 0;
@@ -35,4 +35,7 @@
         }
     }
 
+    @media screen and (min-width: 768.1px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
 }
