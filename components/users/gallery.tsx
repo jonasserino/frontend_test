@@ -73,7 +73,7 @@ const Gallery = ({ users }: GalleryProps) => {
 						</div>
 						<div className="body">
 							{selectedUser && (
-								<div className="user-info info">
+								<dl className="user-info info">
 									<div className="avatar">
 										<Avatar
 											size={240}
@@ -89,27 +89,35 @@ const Gallery = ({ users }: GalleryProps) => {
 										/>
 									</div>
 									<div className="name">
-										{selectedUser.name} ({selectedUser.username})
+										<dt className="sr-only">Name - Username</dt>
+										<dd>
+											{selectedUser.name} ({selectedUser.username})
+										</dd>
 									</div>
 									<div className="field">
+										<dt className="sr-only">Address</dt>
 										<FaLocationDot className="icon" />
-										<div className="value">{`${selectedUser.address.street}, ${selectedUser.address.suite}, ${selectedUser.address.city}`}</div>
+										<dd className="value">{`${selectedUser.address.street}, ${selectedUser.address.suite}, ${selectedUser.address.city}`}</dd>
 									</div>
 									<div className="field">
+										<dt className="sr-only">Phone</dt>
 										<FaPhone className="icon" />
-										<div className="value">{selectedUser.phone}</div>
+										<dd className="value">{selectedUser.phone}</dd>
 									</div>
 									<div className="field">
+										<dt className="sr-only">Email</dt>
 										<FaEnvelope className="icon" />
-										<div className="value">{selectedUser.email}</div>
+										<dd className="value">{selectedUser.email}</dd>
 									</div>
 									<div className="company">
-										<div className="name">{selectedUser.company.name}</div>
+										<dt className="sr-only">Company</dt>
+										<dd className="name">{selectedUser.company.name}</dd>
+										<dt className="sr-only">Company Catch Phrase</dt>
 										<div className="catchphrase">
 											{selectedUser.company.catchPhrase}
 										</div>
 									</div>
-								</div>
+								</dl>
 							)}
 						</div>
 					</div>
