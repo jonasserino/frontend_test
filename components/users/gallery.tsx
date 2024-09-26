@@ -12,6 +12,7 @@ import {
 import Modal from "@/components/users/modal";
 
 import type { User } from "@/types/user";
+import Link from "next/link";
 
 export type GalleryProps = {
 	users: User[];
@@ -102,12 +103,20 @@ const Gallery = ({ users }: GalleryProps) => {
 									<div className="field">
 										<dt className="sr-only">Phone</dt>
 										<FaPhone className="icon" />
-										<dd className="value">{selectedUser.phone}</dd>
+										<dd className="value">
+											<Link href={`tel:${selectedUser.phone}`}>
+												{selectedUser.phone}
+											</Link>
+										</dd>
 									</div>
 									<div className="field">
 										<dt className="sr-only">Email</dt>
 										<FaEnvelope className="icon" />
-										<dd className="value">{selectedUser.email}</dd>
+										<dd className="value">
+											<Link href={`mailto:${selectedUser.email}`}>
+												{selectedUser.email}
+											</Link>
+										</dd>
 									</div>
 									<div className="company">
 										<dt className="sr-only">Company</dt>
