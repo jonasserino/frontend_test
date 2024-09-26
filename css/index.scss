@@ -5,11 +5,18 @@
 @import "./modal-container";
 @import "./dnd-classlist";
 
+// includes padding to element's height/width
+* {
+    box-sizing: border-box;
+}
+
 // Padding and margin resets for lists
 ul, ol, dl, li, dt, dd {
     margin: 0;
     padding: 0;
+    list-style-type: none;
 }
+
 
 a {
     color: inherit;
