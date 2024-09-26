@@ -40,10 +40,10 @@ const Gallery = ({ users }: GalleryProps) => {
 		<div className="user-gallery">
 			<h1 className="heading">Users</h1>
 			<ul className="items">
-				{usersList.map((user, index) => (
+				{usersList.map((user) => (
 					<li
 						className="item user-card"
-						key={index}
+						key={`user-card-${user.id}`}
 						onClick={() => handleModalOpen(user.id)}
 					>
 						<div className="body">
